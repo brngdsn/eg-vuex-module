@@ -2,24 +2,27 @@ import api from '../../api/eg-api'
 import * as types from '../mutation-types'
 
 const state = {
-  someResources: []
+  someResources: [],
+  someOtherResources: []
 }
 
 const getters = {
-  someResources: state => state.someResources
+  someResources: state => state.someResources,
+  someOtherResources: state => state.someOtherResources
 }
 
 const actions = {
   async fetchResource ({commit}, config) {
     return api.get(config.url)
       .then(response => {
+        console.log(response, 'response')
         commit(types.MUT_RESOURCE, {
           additive: config.additive,
           prop: config.prop,
-          body: response.body,
+          body: response.data,
           headers: response.headers
         })
-        return response.body
+        return response.data
       })
       .catch(e => Promise.reject(e))
   }

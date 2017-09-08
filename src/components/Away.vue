@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="away">
     <nav-bar></nav-bar>
     <section class="hero is-medium is-primary is-bold">
       <div class="hero-body">
-        <h1 class="title">Home</h1>
-        <h2 class="subtitle">Some Resources</h2>
-        <b-table :data="someResources">
+        <h1 class="title">Away</h1>
+        <h2 class="subtitle">Some Other Resources</h2>
+        <b-table :data="someOtherResources">
 
           <template scope="props">
               <b-table-column label="RID" width="60" numeric>
@@ -40,7 +40,7 @@
   import NavBar from './NavBar'
   import { mapGetters, mapActions } from 'vuex'
   export default {
-    name: 'home',
+    name: 'away',
     components: {
       NavBar
     },
@@ -50,7 +50,7 @@
     },
     computed: {
       ...mapGetters([
-        'someResources'
+        'someOtherResources'
       ])
     },
     methods: {
@@ -60,8 +60,8 @@
       async fetch () {
         this.busy = true
         await this.fetchResource({
-          url: '/some-resources',
-          prop: 'someResources'
+          url: '/some-other-resources',
+          prop: 'someOtherResources'
         })
         this.busy = false
       }
@@ -70,7 +70,7 @@
       this.fetch()
     },
     mounted () {
-      console.log('* Mounted Home Component!')
+      console.log('* Mounted Away Component!')
     }
   }
 </script>
