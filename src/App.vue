@@ -1,6 +1,8 @@
 <template>
-  <div id="app" class="container">
-    <router-view></router-view>
+  <div id="app">
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -10,12 +12,16 @@
   }
 </script>
 
-<style lang="stylus">
-  @import "~buefy/lib/buefy.css"
-  @import "~bulma/css/bulma.css"
+<style lang='stylus'>
+  @import 'assets/_transition.styl'
+  @import '~buefy/lib/buefy.css'
+  @import '~bulma/css/bulma.css'
   #app
     font-family: Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    margin-top: 60px
+  .page
+    padding: 5% 10%
+    width: 100vw
+    height: 100vh
 </style>
