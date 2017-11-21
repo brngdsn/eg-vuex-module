@@ -6,12 +6,18 @@ import GenericRestClient from '@/components/GenericRestClient'
 import GenericRestClientV2 from '@/components/GenericRestClientV2'
 import GeoClient from '@/components/GeoClient'
 import MapboxGeoClient from '@/components/MapboxGeoClient'
+import GithubGraphqlClient from '@/components/GithubGraphqlClient'
 
 Vue.use(Router)
 
 export default new Router({
   linkActiveClass: 'is-active',
   routes: [
+    {
+      path: '/github-graphql-client',
+      name: 'GithubGraphqlClient',
+      component: GithubGraphqlClient
+    },
     {
       path: '/mapbox-geo-client',
       name: 'MapboxGeoClient',
@@ -44,7 +50,7 @@ export default new Router({
     },
     {
       path: '/',
-      redirect: '/some-resources'
+      redirect: '/github-graphql-client'
     }
   ]
 })

@@ -17,23 +17,8 @@
 
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-start">
-          <router-link tag="a" class="navbar-item" to="/rest-client">
-            rest-client
-          </router-link>
-          <router-link class="navbar-item" to="/some-resources">
-            some-resources
-          </router-link>
-          <router-link class="navbar-item" to="/generic-rest-client">
-            generic-rest-client
-          </router-link>
-          <router-link class="navbar-item" to="/generic-rest-client-v2">
-            generic-rest-client-v2
-          </router-link>
-          <router-link class="navbar-item" to="/geo-client">
-            geo-client
-          </router-link>
-          <router-link class="navbar-item" to="/mapbox-geo-client">
-            mapbox-geo-client
+          <router-link tag="a" class="navbar-item" to="/github-graphql-client">
+            github-graphql-client
           </router-link>
           <!-- <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link" href="/documentation/overview/start/">
